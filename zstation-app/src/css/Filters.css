@@ -1,0 +1,320 @@
+/* Container styling */
+.dropdown-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 15vh;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    background-color: #ffffff;
+    padding: 0 50px;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  /* Dropdown group styling */
+  .dropdown-group {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .dropdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+  }
+  
+  label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* Styling for the select dropdowns */
+  select {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 100px;
+    outline: none;
+  }
+  
+  /* Search button styling */
+  .search-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #2C2559;
+    color: white;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 200px;
+    font-size: 16px;
+    font-family: Calibre, sans-serif;
+    border: 1px solid transparent;
+  }
+  
+  .search-button:hover {
+    background-color: #2C2559;
+  }
+  
+  .dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Dialog box */
+  .dialog {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dialog h3 {
+    margin-bottom: 20px;
+  }
+  
+  .dialog label {
+    display: block;
+    margin: 10px 0 5px;
+  }
+  
+  .dialog select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .dialog button {
+    padding: 10px 15px;
+    margin-right: 10px;
+    border: none;
+    background-color: #2C2559;
+    color: white;
+    cursor: pointer;
+    border-radius: 25px;
+    width: 125px;
+    font-size: 16px;
+    font-family: Calibre, sans-serif;
+    border: 1px solid transparent;
+  }
+  
+  .dialog button:hover {
+    background-color: #2C2559;
+  }
+
+  .results-container {
+    width: 700px;
+    height: 600px;
+    text-align: left;
+    overflow-y: scroll; /* Enables vertical scrolling */
+    overflow-x: hidden; /* Hide horizontal scroll if not needed */
+    padding: 10px;
+    margin-left: 40px;
+  }
+  
+  /* Styling for the Results Section */
+  .results {
+    flex: 1; /* This takes up one part of the width */
+    background-color: #f4f4f4;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .results h3 {
+    margin-bottom: 15px;
+  }
+  
+  .results ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .results li {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styling for the Google Map Section */
+  .map {
+    flex: 2; /* This takes up two parts of the width */
+    height: 100%; /* Ensures the map takes full height of its container */
+  }
+  
+  .resultContainer {
+    display: flex;
+    background-color: #eae8e8;
+  }
+  
+  .item {
+    padding: 10px;
+    /* Other styling */
+  }
+
+.search-container {
+    width: 700px;
+    height: 620px;
+    flex-shrink: 0;
+    background: url() lightgray 50% / cover no-repeat;
+}
+
+.locator-results-list {
+  padding: 0 0 0 4px;
+  list-style-type: none;
+}
+
+.locator-results {
+  flex: 0 0 42%;
+  flex-direction: column;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  padding-right: 20px;
+  position: static;
+}
+
+.locator-results-summary {
+  display: block;
+  font-size: 17px;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+
+.locator-result {
+  display: flex; /* Use Flexbox for horizontal alignment */
+  flex-wrap: wrap; /* Space between label and value */
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.locator-result-heading {
+  margin-bottom: 10px;
+  font-size: 25px;
+  line-height: 10px;
+  color: #4b0082;
+  flex: 0 1 calc(33.33% - 10px); /* 3 items per row */
+  padding: 10px;
+  text-align: center;
+}
+
+.locator-result-address {
+  color: #231776;
+  margin-bottom: 10px;
+  font-weight: 600;
+  flex: 0 1 calc(33.33% - 10px); /* 3 items per row */
+  padding: 10px;
+  text-align: center;
+}
+
+.locator-hours {
+  flex: 0 1 calc(33.33% - 10px); /* 3 items per row */
+  margin-bottom: 10px; /* Adds space between rows */
+  padding: 10px;
+  text-align: center;
+}
+
+.locator-result-label {
+  font-size: 14px;
+    color: #333;
+}
+
+.locator-result-services {
+  display: block;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Popup styling (initially hidden) */
+.popup {
+  display: block; /* Show when popup state is true */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+.popup-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 300px; /* Adjust width of popup */
+}
+
+/* Close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media (max-width: 990px) {
+
+  .resultContainer {
+    display: flex;
+    background-color: #ffffff;
+    flex-direction: column;
+  }
+  .results-container {
+    width: auto;
+    height: 300px;
+    text-align: left;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    padding: 10px;
+    margin-left: 40px;
+    background-color: #eae8e8;
+  }
+  .search-container {
+    width: auto;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-left: 40px;
+    background: url() lightgray 50% / cover no-repeat;
+    overflow-y: scroll;
+    overflow-x: scroll;
+  }
+  
+}
