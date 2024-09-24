@@ -186,7 +186,7 @@ function Filters() {
     <div className="resultContainer">
       <div className="results-container">
             {results.length === 0 ? (
-            <p className="locator-results-summary">No results found</p>
+            <p className="locator-results-summary">No stations found</p>
           ) : ( 
             <div className="locator-results">
               <ul className="locator-results-list">
@@ -207,8 +207,6 @@ function Filters() {
       </div>
 
       <div className='search-container'>
-        <h3>Maps are coming</h3>
-       
       </div>
     </div>
     </div>  

@@ -180,7 +180,7 @@
     width: 700px;
     height: 620px;
     flex-shrink: 0;
-    background: url() lightgray 50% / cover no-repeat;
+    background: url(../images/map.png) lightgray 50% / cover no-repeat;
 }
 
 .locator-results-list {
@@ -297,7 +297,7 @@
   }
   .results-container {
     width: auto;
-    height: 300px;
+    height: 500px;
     text-align: left;
     overflow-y: scroll;
     overflow-x: scroll;
@@ -307,12 +307,12 @@
   }
   .search-container {
     width: auto;
-    height: 300px;
+    height: 500px;
     justify-content: center;
     align-items: center;
     padding: 10px;
     margin-left: 40px;
-    background: url() lightgray 50% / cover no-repeat;
+    background: url(../images/map.png) lightgray 50% / cover no-repeat;
     overflow-y: scroll;
     overflow-x: scroll;
   }
