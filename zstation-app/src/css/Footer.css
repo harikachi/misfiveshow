@@ -1,0 +1,217 @@
+/* General footer styling */
+.footer {
+    background-color: #ffffff;  
+    color: #ED560E;            
+    padding: 20px;
+    margin-left: 20px;
+  }
+  
+  .footer-top {
+    display: flex;
+    justify-content: space-between; 
+    align-items: top;
+    padding-bottom: 20px;
+  }
+  
+  .footer-logo {
+    width: 100px;           
+  }
+  
+  .contact-btn {
+    background-color: #ED560F;  
+    color: white;              
+    padding: 10px 20px;         
+    border: none;             
+    border-radius: 20px;         
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 600;
+    font-family: Calibre, sans-serif; 
+  }
+
+  .contact-btn-container {
+    margin-top: 20px;
+  }
+  
+  .contact-btn:hover {
+    background-color: #f18c21f0;  
+  }
+
+  .button__arrow {
+    transform: translateZ(0);
+    color: #ED560E;
+  }
+
+  .footer-bottom {
+    margin-top: 20px;
+  }
+  .button__circle {
+    color: var(--color-orange);
+    color: var(--color-orange);
+    margin-left: 20px;
+    border-radius: 50%;
+    background-color: white;
+  }
+  .footer-lists {
+    border-bottom: 1px solid var(--color-footer-hairline);
+    display: flex;
+    flex: 1 1 auto;
+  }
+
+  .footer-links {
+    list-style: none;          
+    display: block;
+    justify-content: left; 
+    font-family: Calibre, sans-serif;
+    padding: 16px 12px 0;
+    padding-top: 16px;
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: 20px;
+    font-size: 14px;
+    flex: 0 1 50%;
+  }
+
+  .footer-links-h5 {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 20px 0 0;
+    line-height: 30px;
+  }
+  
+  .footer-links li {
+    margin: 0 10px;
+    padding-top: 10px;
+    text-align: left;
+    font-weight: 600;
+  }
+  
+  .footer-links a {
+    color: #ED560E;              
+    text-decoration: none;      
+  }
+  
+  .footer-links a:hover {
+    color: #fff;           
+  }
+  
+  .footer-icons-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 20px;
+    margin-left: 30px;
+  }
+  
+  .social-icon {
+    font-size: 30px; 
+    color: #ED560E;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    color: #61dafb; 
+  }
+
+  .footer__utility {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0 -10px;
+    padding: 0;
+  }
+
+  .footer__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer__utility-item {
+    width: auto;
+    margin-bottom: 0;
+    margin-right: 15px;
+    font-family: Calibre, sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #000000;
+  }
+
+  .footer--columns .footer__bottom-left {
+    margin-top: 0;
+    flex-direction: row-reverse;
+  }
+  
+  @media (max-width: 990px) {
+    .footer {
+        display: flex;
+        flex: 1 1 auto;
+        margin-left: 50px;
+    }
+    .footer-top {
+        display: table-column-group;
+    }
+    .footer-logo {
+        width: 100px;
+        margin-bottom: -40px;
+    }
+    .footer-icons-container {
+        display: none;
+    }
+    .contact-btn-container {
+        display: flex;
+    }
+
+    .footer-lists {       
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        font-family: Calibre, sans-serif;
+        padding: 16px 12px 0;
+        padding-top: 16px;
+        margin-bottom: 0;
+        margin-top: 0;
+        line-height: 20px;
+        font-size: 14px;
+        flex: 0 1 50%;
+      }
+    
+      .menu-1 {
+        order: 1; /* First menu (Home) */
+        margin-bottom: 20px;
+      }
+    
+      .menu-5 {
+        order: 2; /* Fifth menu (Contact) */
+        margin-bottom: 20px;
+
+      }
+    
+      .menu-2 {
+        order: 3; /* Second menu (About) */
+        margin-bottom: 20px;
+      }
+    
+      .menu-3 {
+        order: 4; /* Third menu (Services) */
+        margin-bottom: 20px;
+      }
+    
+      .menu-4 {
+        order: 5; /* Fourth menu (Products) */
+        margin-bottom: 20px;
+      }
+
+      .border-with-line {
+        display: none;
+      }
+      .footer-icons-container {
+        display: none;
+      }
+      .footer-bottom-low {
+        display: none;
+      }
+  }
