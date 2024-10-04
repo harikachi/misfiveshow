@@ -1,6 +1,18 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
 import '../css/Filters.css';
+
+import ZLocationMarker from '../images/z_logo.jpg';
+
+const customIcon = new L.Icon({
+  iconUrl: ZLocationMarker,
+  iconSize: [32, 32], // Adjust the size to match your custom image
+  iconAnchor: [16, 32], // Anchor the icon appropriately (center it on the map marker point)
+  popupAnchor: [0, -32], // Position the popup slightly above the marker
+});
 
 function Filters() {
   //console.log("Filters context in Filters.js:", setSelections);
@@ -64,6 +76,7 @@ function Filters() {
       .then((response) => {
         if (Array.isArray(response.data)) {
           setResults(response.data); // Already an array, set it directly
+          //<CustomMapContainer response={response.data} />
         } else {
           // Convert object data to an array
           const arrayData = Object.values(response.data); // Convert object to array
@@ -76,6 +89,8 @@ function Filters() {
       });
 
   };
+
+
 
   return (
     <div>
@@ -207,6 +222,41 @@ function Filters() {
       </div>
 
       <div className='search-container'>
+
+        <div className="map-container">
+          <MapContainer 
+            center={[-40.9006, 174.8860]} // Coordinates of New Zealand
+            zoom={6}                      // Zoom level
+            style={{ height: "75vh", width: "110%" }} // Full screen height and width
+          >
+            <TileLayer
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            />
+
+            {/* Render markers for each station */}
+            {results && results.length > 0 && results.map(station => {
+              if (station.location && station.location.coordinates) {
+                console.log(`Rendering marker for station "${station.suburb}" at coordinates:`, station.location.coordinates);
+                return (
+                  <Marker 
+                    key={station._id} 
+                    position={[station.location.coordinates.lat, station.location.coordinates.lng]}
+                    icon={customIcon} // Use the custom marker icon
+                  >
+                    <Popup>
+                      <strong>{station.region}</strong><br />
+                      {station.suburb}, {station.district}
+                    </Popup>
+                  </Marker>
+                );
+              } else {
+                console.warn(`Skipping station "${station.suburb}" due to missing coordinates.`);
+                return null;
+              }
+            })}
+          </MapContainer>
+        </div>
       </div>
     </div>
     </div>  
