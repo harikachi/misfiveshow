@@ -7,9 +7,10 @@ npm install @fortawesome/fontawesome-free
 
 npm install @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons
 
-npm install @fortawesome/react-fontawesome @fortawesome/free-brands-svg-icons
+npm install @fortawesome/free-brands-svg-icons
 
 npm install axios
 
-
 npm install express mongoose cors
+
+npm install leaflet react-leaflet
